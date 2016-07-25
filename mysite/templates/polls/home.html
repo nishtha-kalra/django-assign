@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <title>Home</title>
+</head>
+<body>
+    Welcome!!
+    <br><br>
+    <a href="/polls/directory">Operations on Directory</a>
+    <br><br>
+    <form action="/polls/logout" method="post">
+        {% csrf_token %}
+        <button type="submit" value="Logout">Logout</button>
+    </form>
+</body>
+</html>

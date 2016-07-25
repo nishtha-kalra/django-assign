@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Entry</title>
+</head>
+<body>
+     <form action="" method="post">
+        {% csrf_token %}
+         <input type="hidden" value="{{entry.id}}" id="id" />
+        <label for="dir_name">Name</label>
+        <input type="text" name="dir_name" value="{{entry.ename}}" required><br><br>
+        <label for="phone_number">Phone Number</label>
+        <input type="text" name="phone_number" value="{{entry.phone_no}}" required><br><br>
+        <label for="alt_number">Alternate Number</label>
+        <input type="text" name="alt_number" value="{{entry.alt_no}}"><br><br>
+        <label for="address">Address</label>
+        <input type="text" name="address" value="{{entry.addrs}}" required><br><br>
+        <a  href="#" class="btn btn-primary" onclick="validateUpdateCustomer();">Update</a>
+    </form>
+</body>
+</html>
